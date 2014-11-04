@@ -133,10 +133,10 @@ var moves = {
     var distanceToHealthWell = healthWellStats.distance;
     var directionToHealthWell = healthWellStats.direction;
 
-    if (myHero.health < 40) {
+    if (myHero.health < 30) {
       //Heal no matter what if low health
       return directionToHealthWell;
-    } else if (myHero.health < 100 && distanceToHealthWell === 1) {
+    } else if (myHero.health < 80 && distanceToHealthWell === 1) {
       //Heal if you aren't full health and are close to a health well already
       return directionToHealthWell;
     } else {
@@ -180,7 +180,7 @@ var moves = {
  };
 
 //  Set our heros strategy
-var  move =  moves.aggressor;
+var  move =  moves.safeDiamondMiner;
 
 // Export the move function here
 module.exports = move;
